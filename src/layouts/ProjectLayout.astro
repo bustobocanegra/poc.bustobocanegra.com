@@ -1,0 +1,9 @@
+---
+
+const { frontmatter } = Astro.props;
+
+---
+
+<h1>{frontmatter.projectName}</h1>
+<img src={frontmatter.image.url} style="max-width: 98vw;" alt={frontmatter.image.url} />
+<slot />
