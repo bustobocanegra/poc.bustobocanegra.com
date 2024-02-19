@@ -9,11 +9,50 @@ image:
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum, velit nec porta vehicula, eros lorem tempor augue, id maximus tellus nulla quis elit. Proin a eros non nulla tristique accumsan. Donec commodo sollicitudin enim, eu consequat turpis finibus vitae. Nulla rutrum ante non ex viverra bibendum. Proin porta elementum pellentesque. Mauris id venenatis augue. 
+## This Markdown file does support:
 
-- Aenean rutrum commodo magna bibendum dictum.
-- Suspendisse ultrices massa ac nisl tristique dapibus.
-- Aenean sodales nibh turpis, ac eleifend ante interdum eget.
-- Praesent molestie eget odio semper elementum.
+- **bold**
+- _italics._
+- lists
+- [links](#)
+- and more!
 
-Pellentesque porttitor, nisi et scelerisque placerat, turpis augue volutpat mauris, vel dapibus arcu nisl id risus. In vestibulum rhoncus est. Praesent ultrices pellentesque elit, eu efficitur ante feugiat quis.
+## Plain HTML and inline styles
+
+<div style="max-width: 200px; background-color: skyblue;">
+    <p>Aliquam dictum, velit nec porta vehicula, eros lorem tempor augue, id maximus tellus nulla quis elit. Proin a eros non nulla tristique accumsan. Donec commodo sollicitudin enim, eu consequat turpis finibus vitae.</p>
+</div>
+
+## Blockquotes
+
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
+> This is the first level of quoting.
+>
+> > This is nested blockquote.
+>
+> Back to the first level.
+> 
+> 
+
+
+## Horizontal rules
+
+* * *
+
+***
+
+*****
+
+- - -
+
+## Implicit links
+
+I get 10 times more traffic from [Google][] than from
+[Yahoo][] or [MSN][].
+
+  [google]: http://google.com/        "Google"
+  [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
+  [msn]:    http://search.msn.com/    "MSN Search"
