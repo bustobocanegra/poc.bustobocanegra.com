@@ -7,10 +7,37 @@ const pageTitle = "About";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h2><i>Short Presentation:</i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac mattis purus, sed pulvinar lorem. Duis tincidunt tincidunt libero sit amet pulvinar. Sed in imperdiet enim, nec lacinia urna. Donec mollis justo scelerisque nibh vulputate, eu sodales magna sodales. Donec ut ipsum tellus. Nunc vel lectus eu enim semper commodo.</h2>
-  <p>Aenean convallis sem eget congue vulputate: <mark>email[at]email.com</mark></p>
-  <ul>
-    <li><a href="">GitHub</a></li>
-    <li><a href="">Behance</a></li>
-  </ul>
+  <div class="bio">
+    <h2><i>Short Presentation:</i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac mattis purus, sed pulvinar lorem. Duis tincidunt tincidunt libero sit amet pulvinar. Sed in imperdiet enim, nec lacinia urna. Donec mollis justo scelerisque nibh vulputate, eu sodales magna sodales. Donec ut ipsum tellus. Nunc vel lectus eu enim semper commodo.</h2>
+    <p>Aenean convallis sem eget congue vulputate: <strong>email[at]email.com</strong></p>
+    <ul class="social-media-list">
+      <li><a class="social" href="https://github.com/username">GitHub</a></li>
+      <li><a class="social" href="https://www.behance.net/username">Behance</a></li>
+    </ul>
+  </div>
 </BaseLayout>
+
+<style>
+  .bio {
+    max-width: 50rem;
+  }
+
+  .social-media-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .social-media-list li {
+    list-style: none;
+  }
+
+  .social {
+    display: block;
+    padding: 1rem 0.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+</style>
