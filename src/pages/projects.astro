@@ -8,14 +8,99 @@ const pageTitle = "Projects";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <ul>
+  <ul class="gallery">
     {allProjects.map((project) => 
-      <li>
-        <a href={project.url}>
-          <p>{project.frontmatter.projectName}</p>
-          <img src={project.frontmatter.image.url} alt={project.frontmatter.image.alt} style="max-width:50vw;">
+      <li class="gallery-item">
+        <a class="gallery-item-link" href={project.url}>
+          <article class="card">
+            <div class="card-head">
+              <h2>{project.frontmatter.projectName}</h2>
+            </div>
+            <img src={project.frontmatter.image.url} alt={project.frontmatter.image.alt} />
+          </article>
         </a>
       </li>
     )}
   </ul>
 </BaseLayout>
+
+<style>
+/* Gallery  */
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 2rem 0 4rem;
+  }
+
+  .gallery-item {
+    flex: 0 1 auto;
+    overflow: hidden;
+    list-style: none;
+    border-radius: 4px;
+  }
+
+  .gallery-item-link {
+    display: block;
+    text-decoration: none;
+    background-color: lightgrey;
+  }
+
+  @media screen and (min-width: 768px) {
+    .gallery-item {
+      width: calc(50% - 1rem);
+    }
+  }
+
+/* Card  */
+  .card {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .card-head {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+  }
+
+  .card-head:active {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .card-head * {
+    color: #FFF;
+    text-shadow: 0 0 3px #555;
+  }
+
+  @media screen and (min-width: 768px) {
+    .card-head {
+      background-color: rgba(0, 0, 0, 0.4);
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+      transition-property: all;
+      transition-duration: 1s;
+    }
+
+    .card-head:hover,
+    .card-head:active {
+      background-color: rgba(0, 0, 0, 0.15);
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
+    }
+  }
+
+</style>
