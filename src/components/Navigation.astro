@@ -2,10 +2,46 @@
 
 ---
 
-<nav>
-  <h1 class="logo"><a href="/">Busto Bocanegra</a></h1>
-  <ul>
+<nav class="nav-wrapper">
+  <a class="home-link" href="/"><h1>Busto Bocanegra</h1></a>
+  <ul class="main-nav">
     <li><a href="/projects/">Projects</a></li>
     <li><a href="/about/">About</a></li>
   </ul>
 </nav>
+
+<style>
+  .nav-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
+    padding: 1rem;
+  }
+
+  .home-link {
+    margin-right: auto;
+    text-decoration: none;
+  }
+
+  .home-link h1 {
+    margin: 0;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-flow: row wrap;
+   padding: 0;
+    margin: 0;
+  }
+
+  .main-nav li {
+    list-style: none;
+  }
+
+  .main-nav li a {
+    display: block;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+  }
+</style>
