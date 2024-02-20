@@ -7,5 +7,21 @@ const pageTitle = "Busto Bocanegra";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <img src="https://i.gifer.com/LGUj.gif" alt="miscellaneous images from projects">
+  <section class="hero">
+    <img class="cover" src="https://i.gifer.com/LGUj.gif" alt="miscellaneous images from projects">
+  </section>
 </BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    height: fit-content;
+    padding-block-start: 4rem;
+  }
+  .hero .cover {
+    width: auto;
+    height: 100%;
+    margin: auto;
+    transform: rotate(-6deg);
+  }
+</style>
