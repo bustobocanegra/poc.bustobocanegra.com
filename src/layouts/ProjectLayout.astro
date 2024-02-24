@@ -7,7 +7,44 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.projectName}>
-  <h1>{frontmatter.projectName}</h1>
-  <img src={frontmatter.image.url} alt={frontmatter.image.url}>
-  <slot />
+  <section class="project-cover">
+    <img src={frontmatter.image.url} alt={frontmatter.image.url}>
+  </section>
+  <section class="project-head">
+    <div><h2>{frontmatter.projectName}</h2></div>
+    <div>
+      <p>{frontmatter.projectDescription}</p>
+      <p>{frontmatter.projectPurpose}</p>
+    </div>
+  </section>
+  
+  <section class="project-body">
+    <slot />
+  </section>
 </BaseLayout>
+
+<style>
+  .project-head {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: baseline;
+  }
+
+  .project-head,
+  .project-body {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    .project-head {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .project-head div:first-child {
+      flex: 1 0 50%;
+    }
+  }
+</style>

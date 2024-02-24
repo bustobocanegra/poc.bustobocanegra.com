@@ -2,12 +2,16 @@
 
 layout: ../../layouts/ProjectLayout.astro
 
-projectName: 'My First Project'
+projectName: 'Ejemplo de título de proyecto muuuuy largo'
+projectDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum, velit nec porta vehicula, eros lorem tempor augue, id maximus tellus nulla quis elit.'
+projectPurpose: 'Donec commodo sollicitudin enim, eu consequat turpis finibus vitae. Nulla rutrum ante non ex viverra bibendum. Proin porta elementum pellentesque. Mauris id venenatis augue.'
 image:
     url: 'https://static.simpledesktops.com/uploads/desktops/2016/08/28/Wind-Vector-resize.png'
     alt: 'The full Astro logo.'
 
 ---
+
+![Alt test](../../images/placeholder-spread.png)
 
 ## This Markdown file does support:
 
