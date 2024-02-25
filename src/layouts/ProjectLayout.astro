@@ -20,7 +20,7 @@ const { frontmatter } = Astro.props;
   <section class="project-body">
     <slot />
     <footer>
-      <button href="#">Back to Top ↑</button>
+      <button class="back-to-top" href="#">Back to Top <span class="arrow-up">↑</span></button>
     </footer>
   </section>
 </BaseLayout>
@@ -33,7 +33,7 @@ const { frontmatter } = Astro.props;
     padding: 2rem 0;
   }
 
-  footer button {
+  .back-to-top {
     font-size: large;
     padding: 1rem;
     margin-left: auto;
@@ -42,9 +42,19 @@ const { frontmatter } = Astro.props;
     cursor: pointer;
   }
 
-  footer button:hover {
+  .back-to-top:hover {
     text-decoration: underline dotted .1rem;
     text-underline-position: under;
+  }
+
+  .arrow-up {
+    display: inline-block;
+    margin-left: 3px;
+    transition: transform .3s ease;
+  }
+
+  *:hover > .arrow-up {
+    transform: translate(0,-5px);
   }
 
   .project-head {
