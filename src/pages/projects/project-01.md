@@ -12,6 +12,9 @@ image:
 ---
 
 ![Alt test](../../images/placeholder-spread.png)
+![Alt test](../../images/placeholder-spread.png)
+![Alt test](../../images/placeholder-spread.png)
+![Alt test](../../images/placeholder-spread.png)
 
 ## This Markdown file does support:
 
