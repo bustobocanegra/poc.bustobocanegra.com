@@ -8,98 +8,90 @@ const pageTitle = "Projects";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <ul class="gallery">
+  <section class="card-group">
     {allProjects.map((project) => 
-      <li class="gallery-item">
-        <a class="gallery-item-link" href={project.url}>
-          <div class="card">
-            <div class="card-head">
-              <h2>{project.frontmatter.projectName}</h2>
-            </div>
+      <a class="link-wrapper" href={project.url}>
+        <div class="card">
+          <div class="card-img">
             <img src={project.frontmatter.image.url} alt={project.frontmatter.image.alt} />
           </div>
-        </a>
-      </li>
+          <div class="card-body">
+            <p class="card-title">{project.frontmatter.projectName}</p>
+            <span class="cta">View project →</span>
+          </div>
+        </div>
+      </a>
     )}
-  </ul>
+  </section>
 </BaseLayout>
 
 <style>
-/* Gallery  */
-  .gallery {
+  .card-group {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 4rem;
     padding: 0;
   }
 
-  .gallery-item {
-    flex: 0 1 auto;
-    overflow: hidden;
-    list-style: none;
-    border-radius: 4px;
-  }
-
-  .gallery-item-link {
+  .link-wrapper {
     display: block;
     text-decoration: none;
-    background-color: lightgrey;
-  }
-
-  @media screen and (min-width: 768px) {
-    .gallery-item {
-      width: calc(50% - 1rem);
-    }
+    overflow: hidden;
   }
 
 /* Card  */
   .card {
     position: relative;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
   }
 
-  .card-head {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
+  .card-img {
+    flex: 0 1 60%;
+    overflow: hidden;
+  }
+
+  .card-body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-    -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px);
+    flex-flow: column nowrap;
+    flex: 0 1 40%;
+    padding: 0 1rem;
   }
 
-  .card-head:active {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-  .card-head * {
-    color: #FFF;
-    text-shadow: 0 0 3px #555;
+  .card-title {
+    margin: 2rem 0 1rem;
+    font-size: x-large;
+    font-weight: 700;
   }
 
   @media screen and (min-width: 768px) {
-    .card-head {
-      background-color: rgba(0, 0, 0, 0.4);
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px);
-      transition-property: all;
-      transition-duration: 1s;
+    .card {
+      flex-flow: row nowrap;
+      gap: 2rem;
     }
 
-    .card-head:hover,
-    .card-head:active {
-      background-color: rgba(0, 0, 0, 0.15);
-      -webkit-backdrop-filter: blur(1px);
-      backdrop-filter: blur(1px);
+    .card-body {
+      padding: 0;
+    }
+
+    .card-title {
+      margin: 2rem 0 1rem;
+      font-size: xx-large;
+    }
+
+    .card img {
+      transition: transform .3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.02);
+    }
+
+    .card:hover .card-title,
+    .card:hover .cta {
+      text-decoration: underline dotted .1rem;
+      text-underline-offset: .4rem;
     }
   }
-
 </style>
