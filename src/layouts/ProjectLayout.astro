@@ -19,10 +19,34 @@ const { frontmatter } = Astro.props;
   </section>
   <section class="project-body">
     <slot />
+    <footer>
+      <button href="#">Back to Top ↑</button>
+    </footer>
   </section>
 </BaseLayout>
 
 <style>
+  footer {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  footer button {
+    font-size: large;
+    padding: 1rem;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  footer button:hover {
+    text-decoration: underline dotted .1rem;
+    text-underline-position: under;
+  }
+
   .project-head {
     display: flex;
     flex-flow: column nowrap;
