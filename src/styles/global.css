@@ -10,8 +10,8 @@
 }
 
 img {
-  height: auto;
   max-width: 100%;
+  height: auto;
 }
 
 nav,
@@ -24,6 +24,7 @@ section footer {
   display: flex;
   padding: 2rem 0;
 }
+
 
 /*
  *  Icon set
@@ -46,8 +47,9 @@ section footer {
 .icon.arrow-down   { background-image: var(--icon-arrow-down); }
 .icon.arrow-left   { background-image: var(--icon-arrow-left); }
 
+
 /*
- *   Dynamic arrow attachment for link elements
+ *  Dynamic arrow attachment for link elements
  */
 
 a:hover .icon.arrow-up     { transform: translate(0,-5px); }
@@ -55,15 +57,16 @@ a:hover .icon.arrow-right  { transform: translate(5px,0); }
 a:hover .icon.arrow-down   { transform: translate(0,5px); }
 a:hover .icon.arrow-left   { transform: translate(-5px,0); }
 
+
 /*
  *  Back to Top
  */
 
 .back-to-top {
   display: inline-block;
-  font-size: large;
   padding: 1rem;
   margin-left: auto;
+  font-size: large;
   background-color: transparent;
   border: none;
   text-decoration: none;
