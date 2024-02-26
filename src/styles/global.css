@@ -49,3 +49,23 @@ a:hover .icon.arrow-up     { transform: translate(0,-5px); }
 a:hover .icon.arrow-right  { transform: translate(5px,0); }
 a:hover .icon.arrow-down   { transform: translate(0,5px); }
 a:hover .icon.arrow-left   { transform: translate(-5px,0); }
+
+/*
+ *  Back to Top
+ */
+
+.back-to-top {
+  display: inline-block;
+  font-size: large;
+  padding: 1rem;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.back-to-top:hover {
+  text-decoration: underline dotted .1rem;
+  text-underline-position: under;
+}
