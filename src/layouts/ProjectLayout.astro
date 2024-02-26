@@ -26,15 +26,19 @@ const { frontmatter } = Astro.props;
 </BaseLayout>
 
 <style>
+  .project-head,
+  .project-body {
+    max-width: 1200px;
+  }
+
   .project-head {
     display: flex;
     flex-flow: column nowrap;
     align-items: baseline;
+    margin: 2rem auto;
   }
 
-  .project-head,
   .project-body {
-    max-width: 1200px;
     margin: 0 auto;
   }
 
