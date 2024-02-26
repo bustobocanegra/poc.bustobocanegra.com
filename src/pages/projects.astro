@@ -17,7 +17,7 @@ const pageTitle = "Projects";
           </div>
           <div class="card-body">
             <p class="card-title">{project.frontmatter.projectName}</p>
-            <span class="cta">View project <span class="arrow-right">→</span></span>
+            <span class="cta">View project <i class="icon arrow-right"></i></span>
           </div>
         </div>
       </a>
@@ -26,16 +26,6 @@ const pageTitle = "Projects";
 </BaseLayout>
 
 <style>
-  .card .arrow-right {
-    display: inline-block;
-    margin-left: 3px;
-    transition: transform .3s ease;
-  }
-
-  .card:hover .arrow-right {
-    transform: translate(5px,0);
-  }
-
   .card-group {
     display: flex;
     flex-flow: column nowrap;
