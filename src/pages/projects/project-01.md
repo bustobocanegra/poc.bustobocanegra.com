@@ -16,6 +16,9 @@ image:
 ![Alt test](../../images/placeholder-spread.png)
 ![Alt test](../../images/placeholder-spread.png)
 
+
+<div class="content-right">
+
 ## This Markdown file does support:
 
 - **bold**
@@ -26,9 +29,15 @@ image:
 
 ## Plain HTML and inline styles
 
-<div style="max-width: 200px; background-color: skyblue;">
-    <p>Aliquam dictum, velit nec porta vehicula, eros lorem tempor augue, id maximus tellus nulla quis elit. Proin a eros non nulla tristique accumsan. Donec commodo sollicitudin enim, eu consequat turpis finibus vitae.</p>
+Praesent nec odio vitae ex tempor iaculis ac sed elit. Suspendisse porttitor porta lacus, ac accumsan purus sollicitudin sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ornare eleifend lacus, vel malesuada justo pharetra sed. Suspendisse vel magna urna. Nam ultricies leo in elementum eleifend. Suspendisse pretium nibh id nisl varius posuere. Vivamus in felis convallis, rutrum magna non, dignissim diam. Ut fermentum pharetra orci ac iaculis. Etiam sed nulla ullamcorper, iaculis turpis at, vehicula nibh. Cras nec eros vitae neque porttitor malesuada ut id tortor. Aenean hendrerit felis magna, venenatis vulputate purus blandit et. Fusce sed blandit nunc. Aenean blandit eu enim in finibus. Donec tristique, ante suscipit mattis feugiat, dui lorem rhoncus orci, ac fermentum mauris enim at felis.
+
 </div>
+
+![Alt test](../../images/placeholder-spread.png)
+![Alt test](../../images/placeholder-spread.png)
+
+
+<div class="content-left">
 
 ## Blockquotes
 
@@ -42,8 +51,11 @@ image:
 >
 > Back to the first level.
 > 
-> 
 
+
+<div style="padding: 1rem; background-color: lavender;">
+    <p>Aliquam dictum, velit nec porta vehicula, eros lorem tempor augue, id maximus tellus nulla quis elit. Proin a eros non nulla tristique accumsan. Donec commodo sollicitudin enim, eu consequat turpis finibus vitae.</p>
+</div>
 
 ## Horizontal rules
 
@@ -55,7 +67,18 @@ image:
 
 - - -
 
+</div>
+
+
+![Alt test](../../images/placeholder-spread.png)
+![Alt test](../../images/placeholder-spread.png)
+
+
+<div class="content-center">
+
 ## Implicit links
+
+Praesent nec odio vitae ex tempor iaculis ac sed elit. Suspendisse porttitor porta lacus, ac accumsan purus sollicitudin sit amet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean ornare eleifend lacus, vel malesuada justo pharetra sed. Suspendisse vel magna urna. Nam ultricies leo in elementum eleifend.
 
 I get 10 times more traffic from [Google][] than from
 [Yahoo][] or [MSN][].
@@ -63,3 +86,5 @@ I get 10 times more traffic from [Google][] than from
   [google]: http://google.com/        "Google"
   [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
   [msn]:    http://search.msn.com/    "MSN Search"
+
+</div>
