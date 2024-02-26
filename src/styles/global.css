@@ -20,6 +20,11 @@ main {
   margin: 0 auto;
 }
 
+section footer {
+  display: flex;
+  padding: 2rem 0;
+}
+
 /*
  *  Icon set
  *
