@@ -16,7 +16,6 @@
     flex-flow: row wrap;
     align-items: center;
     align-content: center;
-    padding: 1rem;
   }
 
   .home-link {
@@ -41,7 +40,17 @@
 
   .main-nav li a {
     display: block;
-    padding: 1rem 0.5rem;
+    padding: 1rem;
     text-decoration: none;
+  }
+
+  @media screen and (max-width: 576px) {
+    .nav-wrapper {
+      flex-flow: column nowrap;
+    }
+
+    .home-link {
+      margin: 1rem auto 0;
+    }
   }
 </style>
