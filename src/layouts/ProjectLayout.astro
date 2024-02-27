@@ -1,6 +1,7 @@
 ---
 
 import BaseLayout from './BaseLayout.astro';
+import '../styles/project.css';
 
 const { frontmatter } = Astro.props;
 
@@ -51,30 +52,6 @@ const { frontmatter } = Astro.props;
 
     .project-head div:first-child {
       flex: 1 0 50%;
-    }
-  }
-</style>
-
-<style is:global>
- /* Project content */
-  @media screen and (min-width: 768px) {
-    .content-right,
-    .content-center,
-    .content-left {
-      max-width: 60%;
-      padding: 2rem 0;
-    }
-
-    .content-right {
-      margin-left: auto;
-    }
-
-    .content-center {
-      margin: auto;
-    }
-
-    .content-left {
-      margin-right: auto;
     }
   }
 </style>
