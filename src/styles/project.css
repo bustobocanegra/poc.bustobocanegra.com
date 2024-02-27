@@ -1,5 +1,7 @@
 /*
  *  'project' is where markdown files styles are defined.
+ *
+ *  Import this file individually from the layout for projects.
  */
 
 @media screen and (min-width: 768px) {
