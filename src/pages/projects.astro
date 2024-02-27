@@ -9,6 +9,10 @@ const pageTitle = "Projects";
 
 <BaseLayout pageTitle={pageTitle}>
   <section class="card-group">
+    <hgroup>
+      <h2>Featured Projects</h2>
+      <p>Most of these works are side projects; fun stuff based on my interests.</p>
+    </hgroup>
     {allProjects.map((project) => 
       <a class="link-wrapper" href={project.url}>
         <div class="card">
@@ -33,12 +37,12 @@ const pageTitle = "Projects";
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    gap: 4rem;
     padding: 0;
   }
 
   .link-wrapper {
     display: block;
+    margin-bottom: 4rem;
     text-decoration: none;
     overflow: hidden;
   }

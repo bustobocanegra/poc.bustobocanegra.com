@@ -20,6 +20,10 @@ main {
   margin: 0 auto;
 }
 
+section > hgroup {
+  margin-bottom: 2rem;
+}
+
 section footer {
   display: flex;
   padding: 2rem 0;
