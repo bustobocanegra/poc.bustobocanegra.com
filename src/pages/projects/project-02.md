@@ -16,4 +16,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum, velit n
 - Aenean sodales nibh turpis, ac eleifend ante interdum eget.
 - Praesent molestie eget odio semper elementum.
 
-![Alt test](../../images/placeholder-spread.png)
+![Alt test](../../images/1280x800.png)

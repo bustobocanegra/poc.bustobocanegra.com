@@ -6,15 +6,15 @@ projectName: 'Ejemplo de título de proyecto muuuuy largo'
 projectDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum, velit nec porta vehicula, eros lorem tempor augue, id maximus tellus nulla quis elit.'
 projectPurpose: 'Donec commodo sollicitudin enim, eu consequat turpis finibus vitae. Nulla rutrum ante non ex viverra bibendum. Proin porta elementum pellentesque. Mauris id venenatis augue.'
 image:
-    url: 'https://static.simpledesktops.com/uploads/desktops/2016/08/28/Wind-Vector-resize.png'
+    url: '/images/1450x906.png'
     alt: 'The full Astro logo.'
 
 ---
 
-![Alt test](../../images/placeholder-spread.png)
-![Alt test](../../images/placeholder-spread.png)
-![Alt test](../../images/placeholder-spread.png)
-![Alt test](../../images/placeholder-spread.png)
+![Alt test](../../images/1280x800.png)
+![Alt test](../../images/1280x720.png)
+![Alt test](../../images/1280x768.png)
+![Alt test](../../images/1280x800.png)
 
 
 <div class="content-right">
@@ -33,8 +33,8 @@ Praesent nec odio vitae ex tempor iaculis ac sed elit. Suspendisse porttitor por
 
 </div>
 
-![Alt test](../../images/placeholder-spread.png)
-![Alt test](../../images/placeholder-spread.png)
+![Alt test](../../images/1280x800.png)
+![Alt test](../../images/1280x800.png)
 
 
 <div class="content-left">
@@ -70,8 +70,8 @@ Praesent nec odio vitae ex tempor iaculis ac sed elit. Suspendisse porttitor por
 </div>
 
 
-![Alt test](../../images/placeholder-spread.png)
-![Alt test](../../images/placeholder-spread.png)
+![Alt test](../../images/1280x720.png)
+![Alt test](../../images/1280x720.png)
 
 
 <div class="content-center">
