@@ -8,13 +8,14 @@ const pageTitle = "Projects";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <section class="card-group">
+  <section class="projects">
     <hgroup>
       <h2>Featured Projects</h2>
       <p>Most of these works are side projects; fun stuff based on my interests.</p>
     </hgroup>
+    <div class="card-group">
     {allProjects.map((project) => 
-      <a class="link-wrapper" href={project.url}>
+      <a href={project.url}>
         <div class="card">
           <div class="card-img">
             <img src={project.frontmatter.image.url} alt={project.frontmatter.image.alt} />
@@ -26,6 +27,7 @@ const pageTitle = "Projects";
         </div>
       </a>
     )}
+    </div>
     <footer>
       <a class="back-to-top" href="#">Back to Top<i class="icon arrow-up"></i></a>
     </footer>
@@ -33,6 +35,7 @@ const pageTitle = "Projects";
 </BaseLayout>
 
 <style>
+/* Card group */
   .card-group {
     display: flex;
     flex-flow: column nowrap;
@@ -40,11 +43,15 @@ const pageTitle = "Projects";
     padding: 0;
   }
 
-  .link-wrapper {
+  .card-group > a {
     display: block;
     margin-bottom: 4rem;
     text-decoration: none;
     overflow: hidden;
+  }
+
+  .card-group > a:nth-last-child(1) {
+    margin-bottom: 0;
   }
 
 /* Card  */
