@@ -4,7 +4,7 @@ layout: ../../layouts/ProjectLayout.astro
 
 projectName: 'My Fourth Project'
 image:
-    url: 'https://static.simpledesktops.com/uploads/desktops/2020/05/06/sphericalharmonics1.png'
+    src: 'https://static.simpledesktops.com/uploads/desktops/2020/05/06/sphericalharmonics1.png'
     alt: 'The full Astro logo.'
 
 ---

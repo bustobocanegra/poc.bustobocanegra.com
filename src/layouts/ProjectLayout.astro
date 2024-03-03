@@ -1,15 +1,15 @@
 ---
 
-import BaseLayout from './MainLayout.astro';
+import MainLayout from './MainLayout.astro';
 import '../styles/project.css';
 
 const { frontmatter } = Astro.props;
 
 ---
 
-<BaseLayout pageTitle={frontmatter.projectName}>
+<MainLayout pageTitle={frontmatter.projectName}>
   <section class="project-cover">
-    <img src={frontmatter.image.url} alt={frontmatter.image.alt}>
+    <img src={frontmatter.image.src} alt={frontmatter.image.alt}>
   </section>
   <section class="project-head">
     <div><h2>{frontmatter.projectName}</h2></div>
@@ -24,7 +24,7 @@ const { frontmatter } = Astro.props;
       <a class="back-to-top" href="#">Back to Top<i class="icon arrow-up"></i></a>
     </footer>
   </section>
-</BaseLayout>
+</MainLayout>
 
 <style>
   .project-head,

@@ -4,7 +4,7 @@ layout: ../../layouts/ProjectLayout.astro
 
 projectName: 'My Second Project'
 image:
-    url: 'https://static.simpledesktops.com/uploads/desktops/2011/07/28/Cuh_Cuh_Circlebow.png'
+    src: 'https://static.simpledesktops.com/uploads/desktops/2011/07/28/Cuh_Cuh_Circlebow.png'
     alt: 'The full Astro logo.'
 
 ---

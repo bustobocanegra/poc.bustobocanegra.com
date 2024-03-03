@@ -6,7 +6,7 @@ projectName: 'Ejemplo de título de proyecto muuuuy largo'
 projectDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum, velit nec porta vehicula, eros lorem tempor augue, id maximus tellus nulla quis elit.'
 projectPurpose: 'Donec commodo sollicitudin enim, eu consequat turpis finibus vitae. Nulla rutrum ante non ex viverra bibendum. Proin porta elementum pellentesque. Mauris id venenatis augue.'
 image:
-    url: '/images/1450x906.png'
+    src: '/images/1450x906.png'
     alt: 'The full Astro logo.'
 
 ---

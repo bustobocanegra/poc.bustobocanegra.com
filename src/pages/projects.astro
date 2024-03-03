@@ -1,24 +1,24 @@
 ---
 
-import BaseLayout from '../layouts/MainLayout.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 
-const allProjects = await Astro.glob('../pages/projects/*.md');
+const projects = await Astro.glob('../pages/projects/*.{md,mdx}');
 const pageTitle = "Projects";
 
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<MainLayout pageTitle={pageTitle}>
   <section class="projects">
     <hgroup>
       <h2>Featured Projects</h2>
       <p>Most of these works are side projects; fun stuff based on my interests.</p>
     </hgroup>
     <div class="card-group">
-    {allProjects.map((project) => 
+    {projects.map((project) => 
       <a href={project.url}>
         <div class="card">
           <div class="card-img">
-            <img src={project.frontmatter.image.url} alt={project.frontmatter.image.alt} />
+            <img src={project.frontmatter.image.src} alt={project.frontmatter.image.alt} />
           </div>
           <div class="card-body">
             <p class="card-title">{project.frontmatter.projectName}</p>
@@ -32,7 +32,7 @@ const pageTitle = "Projects";
       <a class="back-to-top" href="#">Back to Top<i class="icon arrow-up"></i></a>
     </footer>
   </section>
-</BaseLayout>
+</MainLayout>
 
 <style>
 /* Card group */

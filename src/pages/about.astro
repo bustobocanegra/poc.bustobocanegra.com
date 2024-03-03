@@ -1,12 +1,12 @@
 ---
 
-import BaseLayout from '../layouts/MainLayout.astro';
+import MainLayout from '../layouts/MainLayout.astro';
 
 const pageTitle = "About";
 
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<MainLayout pageTitle={pageTitle}>
   <section class="bio">
     <p><i>Short Presentation:</i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac mattis purus, sed pulvinar lorem. Duis tincidunt tincidunt libero sit amet pulvinar. Sed in imperdiet enim, nec lacinia urna. Donec mollis justo scelerisque nibh vulputate, eu sodales magna sodales. Donec ut ipsum tellus. Nunc vel lectus eu enim semper commodo.</p>
     <p>Aenean convallis sem eget congue vulputate: <strong>email[at]email.com</strong></p>
@@ -17,7 +17,7 @@ const pageTitle = "About";
       <li><a class="social" href="https://www.behance.net/username">Behance</a></li>
     </ul>
   </aside>
-</BaseLayout>
+</MainLayout>
 
 <style>
   .bio {
