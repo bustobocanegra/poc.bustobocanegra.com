@@ -1,8 +1,11 @@
 import { defineConfig, passthroughImageService } from 'astro/config';
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
   image: {
-    service: passthroughImageService(),
+    service: passthroughImageService()
   },
+  integrations: [mdx()]
 });
