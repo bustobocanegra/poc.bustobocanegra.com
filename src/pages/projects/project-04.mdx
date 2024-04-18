@@ -1,13 +1,17 @@
 ---
 
-layout: ../../layouts/ProjectLayout.astro
-
 projectName: 'My Fourth Project'
-image:
-    src: 'https://static.simpledesktops.com/uploads/desktops/2020/05/06/sphericalharmonics1.png'
-    alt: 'The full Astro logo.'
+projectDescription: ''
+projectPurpose: ''
 
 ---
+
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import image from '../../images/1450x815.png';
+
+export const cover = {src: image.src, alt: 'The full Astro logo.'};
+
+<ProjectLayout projectFrontmatter={frontmatter} projectCover={cover}>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum, velit nec porta vehicula, eros lorem tempor augue, id maximus tellus nulla quis elit. Proin a eros non nulla tristique accumsan. Donec commodo sollicitudin enim, eu consequat turpis finibus vitae. Nulla rutrum ante non ex viverra bibendum. Proin porta elementum pellentesque. Mauris id venenatis augue. 
 
@@ -17,3 +21,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum, velit n
 - Praesent molestie eget odio semper elementum.
 
 Pellentesque porttitor, nisi et scelerisque placerat, turpis augue volutpat mauris, vel dapibus arcu nisl id risus. In vestibulum rhoncus est. Praesent ultrices pellentesque elit, eu efficitur ante feugiat quis. Aliquam dictum, velit nec porta vehicula, eros lorem tempor augue, id maximus tellus nulla quis elit. Proin a eros non nulla tristique accumsan. Donec commodo sollicitudin enim, eu consequat turpis finibus vitae. Nulla rutrum ante non ex viverra bibendum. Proin porta elementum pellentesque. Mauris id venenatis augue.
+
+</ProjectLayout>

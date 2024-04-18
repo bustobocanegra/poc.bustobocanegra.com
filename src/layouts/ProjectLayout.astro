@@ -3,19 +3,19 @@
 import MainLayout from './MainLayout.astro';
 import '../styles/project.css';
 
-const { frontmatter } = Astro.props;
+const { projectFrontmatter, projectCover } = Astro.props;
 
 ---
 
-<MainLayout pageTitle={frontmatter.projectName}>
+<MainLayout pageTitle={projectFrontmatter.projectName}>
   <section class="project-cover">
-    <img src={frontmatter.image.src} alt={frontmatter.image.alt}>
+    <img src={projectCover.src} alt={projectCover.alt} />
   </section>
   <section class="project-head">
-    <div><h2>{frontmatter.projectName}</h2></div>
+    <div><h2>{projectFrontmatter.projectName}</h2></div>
     <div>
-      <p>{frontmatter.projectDescription}</p>
-      <p>{frontmatter.projectPurpose}</p>
+      <p>{projectFrontmatter.projectDescription}</p>
+      <p>{projectFrontmatter.projectPurpose}</p>
     </div>
   </section>
   <section class="project-body">
