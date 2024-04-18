@@ -37,8 +37,8 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
-  line-height: var(--line-height);
+  font-family: var(--pico-font-family-sans-serif);
+  line-height: var(--pico-line-height);
 }
 
 
