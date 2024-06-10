@@ -1,0 +1,29 @@
+---
+
+projectName: 'Diseñando la imagen de Open Innovation Lab'
+projectDescription: 'Open Innovation Lab se concibe como un “pop-up lab” organizado por la universidad de Birmingham (UK) que consistió en un taller de innovación colaborativa entre startups, empresas con proyectos innovadores aún en fase de desarrollo, y colaboradores, personas interesadas en participar en procesos de innovación colaborativa bajo la metodología conocida como STEAM (Science, Techonology, Engineering, Art, Mathematics).'
+projectPurpose: 'Mi rol consistió en diseñar la identidad gráfica del evento y crear su sitio web. El objetivo principal era el de atraer a un gran número de colaboradores a participar.'
+
+---
+
+import ProjectLayout from '../../../layouts/ProjectLayout.astro';
+import image from './images/cover.jpg';
+
+export const cover = {src: image.src, alt: 'XXX.'};
+
+<ProjectLayout projectFrontmatter={frontmatter} projectCover={cover}>
+
+<figure>
+  ![Alt logo](./images/01.jpg)
+  ![Alt typography](./images/02.jpg)
+  ![Alt color](./images/03.jpg)
+  ![Alt web-mobile](./images/04.jpg)
+</figure>
+
+<br/>
+
+<div class="content-center">
+  <a class="outline secondary" role="button" href="http://oil.bustobocanegra.com/" target="_blank" style="display: block; margin: 0 auto">Visita la web <i class="icon arrow-right"></i></a>
+</div>
+
+</ProjectLayout>
