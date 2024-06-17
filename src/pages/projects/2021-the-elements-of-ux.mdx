@@ -7,15 +7,15 @@ projectPurpose: 'Este proyecto es el resultado de una colaboración en la que as
 
 ---
 
-import ProjectLayout from '../../../layouts/ProjectLayout.astro';
-import image from './images/cover.jpg';
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import image from './_2021-the-elements-of-ux/cover.jpg';
 
 export const cover = {src: image.src, alt: 'The Elements of User Experience'};
 
 <ProjectLayout projectFrontmatter={frontmatter} projectCover={cover}>
 
 <figure>
-  ![Alt before-after](./images/01.jpg)
+  ![Alt before-after](./_2021-the-elements-of-ux/01.jpg)
   <figcaption>Original vs New version</figcaption>
 </figure>
 
@@ -30,7 +30,7 @@ export const cover = {src: image.src, alt: 'The Elements of User Experience'};
 </div>
 
 <figure>
-  ![Alt final poster](./images/02.jpg)
+  ![Alt final poster](./_2021-the-elements-of-ux/02.jpg)
 </figure>
 
 </ProjectLayout>
