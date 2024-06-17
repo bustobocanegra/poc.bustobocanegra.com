@@ -1,4 +1,15 @@
 :root {
+ /* Color */
+--neutral-50:  #f9f9fa;
+--neutral-100: #ecedf1;
+--neutral-200: #dfe1e6;
+--neutral-300: #d0d3db;
+--neutral-400: #c0c4ce;
+--neutral-500: #afb3c1;
+--neutral-600: #9c9fac;
+--neutral-700: #868993;
+--neutral-800: #696c74;
+--neutral-900: #3e3f44;
 --font-family: sans-serif;
 --line-height: 1.5;
 --font-size: 18px;
