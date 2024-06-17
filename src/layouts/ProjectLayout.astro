@@ -1,6 +1,7 @@
 ---
 
 import MainLayout from './MainLayout.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/project.css';
 
 const { projectFrontmatter, projectCover } = Astro.props;
@@ -20,10 +21,8 @@ const { projectFrontmatter, projectCover } = Astro.props;
   </section>
   <section class="project-body">
     <slot />
-    <footer>
-      <a class="back-to-top" href="#">Back to Top<i class="icon arrow-up"></i></a>
-    </footer>
   </section>
+  <Footer/>
 </MainLayout>
 
 <style>
@@ -36,10 +35,13 @@ const { projectFrontmatter, projectCover } = Astro.props;
     display: flex;
     flex-flow: column nowrap;
     align-items: baseline;
-    margin: 2rem auto;
+    padding: 3rem 0;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--pico-muted-border-color);
   }
 
   .project-body {
+    padding: 3rem 0;
     margin: 0 auto;
   }
 
