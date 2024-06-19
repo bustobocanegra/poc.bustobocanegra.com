@@ -2,13 +2,15 @@
 
 import MainLayout from '../layouts/MainLayout.astro';
 
+import hero from '../images/hero.gif';
+
 const pageTitle = "Busto Bocanegra";
 
 ---
 
 <MainLayout pageTitle={pageTitle}>
   <section class="hero">
-    <img class="hero-image" src="/images/hero.gif" alt="miscellaneous images from projects">
+    <img class="hero-image" src={hero.src} alt="miscellaneous images from projects">
   </section>
 </MainLayout>
 
