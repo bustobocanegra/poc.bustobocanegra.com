@@ -15,7 +15,7 @@
 <style>
   .header {
     padding: 0;
-    margin-bottom: 2rem;
+    margin-bottom: calc(var(--pico-spacing) * 1.5);
     border-bottom: var(--border-deco-width) var(--border-deco-style) var(--border-deco-color);
   }
 
@@ -24,19 +24,16 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    /*max-width: 90vw;*/
   }
 
   .nav-home-link {
     margin-right: auto;
-    font-weight: 700;
     text-decoration: none;
   }
 
   .nav-home-link h1 {
     margin: 0;
     font-size: 1.5rem;
-    font-weight: 700;
   }
 
   .nav-menu {
@@ -64,6 +61,10 @@
 
     .nav-home-link {
       margin-right: 0;
+    }
+
+    .nav-home-link h1 {
+      margin: var(--pico-spacing) 0 0 0;
     }
   }
 </style>
