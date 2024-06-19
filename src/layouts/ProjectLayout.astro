@@ -9,19 +9,21 @@ const { projectFrontmatter, projectCover } = Astro.props;
 ---
 
 <MainLayout pageTitle={projectFrontmatter.projectName}>
-  <section class="project-cover">
-    <img src={projectCover.src} alt={projectCover.alt} />
-  </section>
-  <section class="project-head">
-    <div><h2>{projectFrontmatter.projectName}</h2></div>
-    <div>
-      <p>{projectFrontmatter.projectDescription}</p>
-      <p>{projectFrontmatter.projectPurpose}</p>
-    </div>
-  </section>
-  <section class="project-body">
-    <slot />
-  </section>
+  <div class="container">
+    <section class="project-cover">
+      <img src={projectCover.src} alt={projectCover.alt} />
+    </section>
+    <section class="project-head">
+      <div><h2>{projectFrontmatter.projectName}</h2></div>
+      <div>
+        <p>{projectFrontmatter.projectDescription}</p>
+        <p>{projectFrontmatter.projectPurpose}</p>
+      </div>
+    </section>
+    <section class="project-body">
+      <slot />
+    </section>
+  </div>
   <Footer/>
 </MainLayout>
 

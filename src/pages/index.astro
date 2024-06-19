@@ -8,9 +8,11 @@ const pageTitle = "Busto Bocanegra";
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <section class="hero">
-    <img class="hero-image" src={hero.src} alt="miscellaneous images from projects">
-  </section>
+  <div class="container">
+    <section class="hero">
+      <img class="hero-image" src={hero.src} alt="miscellaneous images from projects">
+    </section>
+  </div>
 </MainLayout>
 
 <style>
@@ -22,7 +24,6 @@ const pageTitle = "Busto Bocanegra";
   .hero .hero-image {
     width: auto;
     height: 100%;
-    padding: 2vw 0;
     margin: 0 auto;
   }
 </style>

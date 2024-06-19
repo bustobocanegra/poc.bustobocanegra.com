@@ -9,27 +9,29 @@ const pageTitle = "Projects";
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <section class="projects">
-    <hgroup>
-      <h2>Featured Projects</h2>
-      <p>Most of these works are side projects; fun stuff based on my interests.</p>
-    </hgroup>
-    <div class="card-group">
-    {projects.map((project) => 
-      <a href={project.url}>
-        <div class="card">
-          <div class="card-img">
-            <img src={project.cover.src} alt={project.cover.alt} />
+  <div class="container">
+    <section class="projects">
+      <hgroup>
+        <h2>Featured Projects</h2>
+        <p>Most of these works are side projects; fun stuff based on my interests.</p>
+      </hgroup>
+      <div class="card-group">
+      {projects.map((project) => 
+        <a href={project.url}>
+          <div class="card">
+            <div class="card-img">
+              <img src={project.cover.src} alt={project.cover.alt} />
+            </div>
+            <div class="card-body">
+              <p class="card-title">{project.frontmatter.projectName}</p>
+              <span class="cta">View project <i class="icon arrow-right"></i></span>
+            </div>
           </div>
-          <div class="card-body">
-            <p class="card-title">{project.frontmatter.projectName}</p>
-            <span class="cta">View project <i class="icon arrow-right"></i></span>
-          </div>
-        </div>
-      </a>
-    )}
-    </div>
-  </section>
+        </a>
+      )}
+      </div>
+    </section>
+  </div>
   <Footer/>
 </MainLayout>
 
