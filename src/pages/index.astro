@@ -8,6 +8,7 @@ const pageTitle = "Busto Bocanegra";
 ---
 
 <MainLayout pageTitle={pageTitle}>
+  <div class="bg"></div>
   <div class="container">
     <section class="hero">
       <img class="hero-image" src={hero.src} alt="miscellaneous images from projects">
@@ -17,6 +18,7 @@ const pageTitle = "Busto Bocanegra";
 
 <style>
   .hero {
+    z-index: 1;
     display: flex;
     height: fit-content;
   }
@@ -25,5 +27,16 @@ const pageTitle = "Busto Bocanegra";
     width: auto;
     height: 100%;
     margin: 0 auto;
+  }
+
+  /* Background decoration */
+  .bg {
+    position: absolute;
+    z-index: -10;
+    top: 0;
+    width: 100vw;
+    height: 50vh;
+    background-color: gold;
+    background-size: cover;
   }
 </style>
