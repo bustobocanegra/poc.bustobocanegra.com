@@ -14,10 +14,16 @@ const { projectFrontmatter, projectCover } = Astro.props;
       <img src={projectCover.src} alt={projectCover.alt} />
     </section>
     <section class="project-head">
-      <div><h2>{projectFrontmatter.projectName}</h2></div>
-      <div>
-        <p>{projectFrontmatter.projectDescription}</p>
-        <p>{projectFrontmatter.projectPurpose}</p>
+      <h2 class="project-title">{projectFrontmatter.projectName}</h2>
+      <div class="project-details">
+        <div>
+          <h6>Sobre el proyecto</h6>
+          <p>{projectFrontmatter.projectDescription}</p>
+        </div>
+        <div>
+          <h6>Objetivos</h6>
+          <p>{projectFrontmatter.projectPurpose}</p>
+        </div>
       </div>
     </section>
     <section class="project-body">
@@ -37,25 +43,35 @@ const { projectFrontmatter, projectCover } = Astro.props;
     display: flex;
     flex-flow: column nowrap;
     align-items: baseline;
-    padding: 3rem 0;
+    padding: 2rem 0;
     margin: 0 auto;
-    border-bottom: 1px solid var(--pico-muted-border-color);
+    border-bottom: 2px dotted var(--pico-muted-border-color);
   }
 
   .project-body {
-    padding: 3rem 0;
+    padding: 2rem 0;
     margin: 0 auto;
   }
 
+  .project-title {
+    font-size: calc(var(--pico-font-size) * 1.5);
+    margin-bottom: calc(var(--pico-spacing) * 3);
+  }
+
+  .project-details {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
   @media screen and (min-width: 768px) {
-    .project-head {
+    .project-details {
       flex-flow: row nowrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
       gap: 2rem;
     }
 
-    .project-head div:first-child {
-      flex: 1 0 50%;
+    .project-details > div {
+      flex: 0 1 50%;
     }
   }
 </style>
