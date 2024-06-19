@@ -15,6 +15,10 @@
 --bittersweet: #ff7563;
 --bittersweet-200: #FFA599;
 --bittersweet-400: #FF4B33;
+/* Border decoration */
+--border-deco-width: 2px;
+--border-deco-style: dotted;
+--border-deco-color: var(--neutral-700);
 --icon-arrow-up: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>');
 --icon-arrow-right: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>');
 --icon-arrow-down: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>');
@@ -28,6 +32,16 @@ h4,
 h5,
 h6 {
   font-family: Petrona;
+}
+
+h6 {
+  font-family: var(--pico-font-family-sans-serif);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+hr {
+  border-top: var(--border-deco-width) var(--border-deco-style) var(--border-deco-color);
 }
 
 :where(audio, canvas, iframe, img, svg, video) {
@@ -100,6 +114,6 @@ a:hover .icon.arrow-left   { transform: translate(-5px,0); }
 }
 
 .back-to-top:hover {
-  text-decoration: underline dotted .1rem;
+  text-decoration: underline var(--border-deco-style) .1rem;
   text-underline-position: under;
 }
