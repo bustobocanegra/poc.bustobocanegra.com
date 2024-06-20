@@ -62,10 +62,6 @@ main {
   margin: 0 auto;
 }
 
-section > hgroup {
-  margin-bottom: calc(var(--pico-spacing) * 2);
-}
-
 /*
  *  Icon set
  *
