@@ -8,22 +8,17 @@ const pageTitle = "About";
 
 <MainLayout pageTitle={pageTitle}>
   <div class="container">
-    <section class="bio">
-      <p><i>Short Presentation:</i> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac mattis purus, sed pulvinar lorem. Duis tincidunt tincidunt libero sit amet pulvinar. Sed in imperdiet enim, nec lacinia urna. Donec mollis justo scelerisque nibh vulputate, eu sodales magna sodales. Donec ut ipsum tellus. Nunc vel lectus eu enim semper commodo.</p>
-      <p>Aenean convallis sem eget congue vulputate: <strong>email[at]email.com</strong></p>
+    <section>
+      <p class="bio">Me licencié en Bellas Artes y acabé con más preguntas que respuestas.<br/> Me interesa la comunicación visual y el diseño de espacios, tanto del mundo real como del digital. Con una aproximación multidisciplinar, mantengo una práctica personal centrada en identidades, diseño web y diseño de espacios. Mi trabajo es estructurado y sistemático, con una visión integral, exploradora y entusiasta.</p>
+      <p><strong>bustobocanegra[at]gmx.com</strong></p>
     </section>
-    <aside>
-      <ul class="social-media-list">
-        <li><a class="social" href="https://github.com/username">GitHub</a></li>
-        <li><a class="social" href="https://www.behance.net/username">Behance</a></li>
-      </ul>
-    </aside>
   </div>
 </MainLayout>
 
 <style>
   .bio {
     max-width: 45rem;
+    font-size: calc(var(--pico-font-size) * 1);
   }
 
   .social-media-list {
