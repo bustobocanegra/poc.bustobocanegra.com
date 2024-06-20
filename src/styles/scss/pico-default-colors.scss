@@ -2,7 +2,7 @@
 :root:not([data-theme=dark]) {
   --pico-background-color: var(--white) /*#fff*/;
   --pico-color: var(--black) /*#212226*/;
-  --pico-text-selection-color: rgba(255, 115, 97, 0.25) /*#ff7563*/;
+  --pico-text-selection-color: rgba(255, 217, 0, 0.25) /*#FFD700*/;
   --pico-muted-color: var(--neutral-800) /*#696b7d*/;
   --pico-muted-border-color: var(--neutral-200) /*#e0e0e7*/;
   --pico-primary: var(--black);
@@ -25,16 +25,16 @@
   /*--pico-secondary-hover-underline: var(--pico-secondary-hover);*/
   /*--pico-secondary-focus: rgba(61, 62, 72, 0.25);*/
   /*--pico-secondary-inverse: #fff;*/
-  --pico-contrast: var(--bittersweet) /*#ff7563*/;
-  --pico-contrast-background: var(--bittersweet) /*#ff7563*/;
+  --pico-contrast: var(--gold) /*#FFD700*/;
+  --pico-contrast-background: var(--gold) /*#FFD700*/;
   /*--pico-contrast-border: var(--pico-contrast-background);*/
-  --pico-contrast-underline: rgba(255, 115, 97, 0.5);
-  --pico-contrast-hover: var(--bittersweet-400) /*#FF4B33*/;
-  --pico-contrast-hover-background: var(--bittersweet-400) /*#FF4B33*/;
+  --pico-contrast-underline: rgba(204, 173, 0, 0.5);
+  --pico-contrast-hover: var(--black) /*#212226*/;
+  --pico-contrast-hover-background: var(--black) /*#212226*/;
   /*--pico-contrast-hover-border: var(--pico-contrast-hover-background);*/
   --pico-contrast-hover-underline: var(--pico-contrast-hover);
-  --pico-contrast-focus: rgba(255, 115, 97, 0.25);
-  /*--pico-contrast-inverse: #fff;*/
+  --pico-contrast-focus: rgba(255, 217, 0, 0.25);
+  /*--pico-contrast-inverse: #000;*/
   /*--pico-box-shadow: 0.0145rem 0.029rem 0.174rem rgba(129, 145, 181, 0.01698), 0.0335rem 0.067rem 0.402rem rgba(129, 145, 181, 0.024), 0.0625rem 0.125rem 0.75rem rgba(129, 145, 181, 0.03), 0.1125rem 0.225rem 1.35rem rgba(129, 145, 181, 0.036), 0.2085rem 0.417rem 2.502rem rgba(129, 145, 181, 0.04302), 0.5rem 1rem 6rem rgba(129, 145, 181, 0.06), 0 0 0 0.0625rem rgba(129, 145, 181, 0.015);*/
   --pico-h1-color: var(--neutral-900) /*#3e3f49*/;
   --pico-h2-color: var(--neutral-900) /*#3e3f49*/;
@@ -42,7 +42,7 @@
   --pico-h4-color: var(--neutral-800) /*#696b7d*/;
   --pico-h5-color: var(--neutral-800) /*#696b7d*/;
   --pico-h6-color: var(--neutral-700) /*#86889f*/;
-  --pico-mark-background-color: var(--bittersweet-200) /*#FFA599*/;
+  --pico-mark-background-color: var(--gold) /*#FFD700*/;
   --pico-mark-color: var(--black) /*#212226*/;
   --pico-ins-color: #279977;
   --pico-del-color: #c84f48;
