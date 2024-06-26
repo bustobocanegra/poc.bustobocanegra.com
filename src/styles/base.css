@@ -17,6 +17,8 @@
 --gold-300: #FFE866;
 --gold-600: #CCAD00;
 --gold-800: #998200;
+/* Typography */
+--font-family-serif: Petrona, Georgia, serif;
 /* Iconography */
 --icon-arrow-up: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>');
 --icon-arrow-right: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>');
@@ -34,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Petrona;
+  font-family: var(--font-family-serif);
 }
 
 h6 {
