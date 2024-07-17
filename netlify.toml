@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://poc-bustobocanegra-com.netlify.app"
+  to = "https://www.bustobocanegra.com"
+  status = 301
+  force = true
