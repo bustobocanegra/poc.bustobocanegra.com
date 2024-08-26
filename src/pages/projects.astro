@@ -19,11 +19,12 @@ const pageTitle = "Projects";
       {projects.map((project) => 
         <a href={project.url}>
           <div class="card">
-            <div class="card-img">
+            <div class="card-media">
               <img src={project.cover.src} alt={project.cover.alt} />
             </div>
-            <div class="card-body">
-              <h3 class="card-title">{project.frontmatter.projectName}</h3>
+            <div class="card-content">
+              <small class="pretitle">{project.frontmatter.projectClient}</small>
+              <h3 class="title">{project.frontmatter.projectName}</h3>
               <span class="cta">Ver proyecto <i class="icon arrow-right"></i></span>
             </div>
           </div>
@@ -66,34 +67,35 @@ const pageTitle = "Projects";
     flex-flow: column nowrap;
   }
 
-  .card-img {
+  .card-media {
     flex: 0 1 60%;
     overflow: hidden;
   }
 
-  .card-body {
+  .card-content {
     display: flex;
     flex-flow: column nowrap;
     flex: 0 1 40%;
-    padding: 0 1rem;
+    padding: calc(var(--pico-spacing) * 1.5);
   }
 
-  .card-title {
-    margin: 2rem 0 1rem;
+  .card-content .pretitle {
+    margin: 0 0 .5rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+
+  .card-content .title {
+    margin: 0 0 .5rem;
   }
 
   @media screen and (min-width: 768px) {
     .card {
       flex-flow: row nowrap;
-      gap: 2rem;
     }
 
-    .card-body {
-      padding: 0;
-    }
-
-    .card-title {
-      margin: 2rem 0 1rem;
+    .card-content {
+      padding: calc(var(--pico-spacing) * 2);
     }
 
     .card img {
@@ -104,7 +106,11 @@ const pageTitle = "Projects";
       transform: scale(1.02);
     }
 
-    .card:hover .card-title,
+    .card-content .title {
+      margin: 0 0 1rem;
+    }
+
+    .card:hover .title,
     .card:hover .cta {
       text-decoration: underline var(--border-deco-style) .1rem;
       text-underline-offset: .4rem;
