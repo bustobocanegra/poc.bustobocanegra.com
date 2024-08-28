@@ -16,14 +16,14 @@ const { projectFrontmatter, projectCover } = Astro.props;
     <section class="project-head">
       <h1 class="project-title">{projectFrontmatter.projectName}</h1>
       <div class="project-details">
-        <div>
-          <h6>Sobre el proyecto</h6>
-          <p>{projectFrontmatter.projectDescription}</p>
-        </div>
-        <div>
-          <h6>Objetivos</h6>
-          <p>{projectFrontmatter.projectPurpose}</p>
-        </div>
+        <dl>
+          <dt>Sobre el proyecto</dt>
+          <dd>{projectFrontmatter.projectDescription}</dd>
+        </dl>
+        <dl>
+          <dt>Objetivos</dt>
+          <dd>{projectFrontmatter.projectPurpose}</dd>
+        </dl>
       </div>
     </section>
     <section class="project-body">
@@ -54,13 +54,34 @@ const { projectFrontmatter, projectCover } = Astro.props;
 
   .project-title {
     max-width: 45rem;
-    margin-bottom: calc(var(--pico-spacing) * 3);
+    margin-bottom: calc(var(--pico-spacing) * 2);
     font-size: calc(var(--pico-font-size) * 1.5);
   }
 
   .project-details {
     display: flex;
     flex-flow: column nowrap;
+  }
+
+  .project-details dl {
+    margin-bottom: calc(var(--pico-spacing) * 2);
+  }
+
+  .project-details dl:last-child {
+    margin-bottom: 0;
+  }
+
+  .project-details dt {
+    --pico-font-size: 1rem;
+    margin-bottom: calc(var(--pico-spacing) / 2);
+    color: var(--neutral-700);
+    font-size: var(--pico-font-size);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .project-details dd {
+    margin: 0;
   }
 
   @media screen and (min-width: 768px) {
@@ -70,8 +91,9 @@ const { projectFrontmatter, projectCover } = Astro.props;
       gap: 2.5rem;
     }
 
-    .project-details > div {
+    .project-details dl {
       flex: 0 1 50%;
+      margin-bottom: 0;
     }
   }
 </style>
