@@ -48,14 +48,14 @@ const pageTitle = "Projects";
     padding: 0;
   }
 
-  .card-group > a {
+  .card-group > :where(a, [role="link"]) {
     display: block;
-    margin-bottom: 4rem;
+    margin-bottom: calc(var(--pico-spacing) * 2);
     text-decoration: none;
     overflow: hidden;
   }
 
-  .card-group > a:nth-last-child(1) {
+  .card-group > :where(a:nth-last-child(1), [role="link"]:nth-last-child(1)) {
     margin-bottom: 0;
   }
 
@@ -88,7 +88,7 @@ const pageTitle = "Projects";
     margin: 0 0 .5rem;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     .card {
       flex-flow: row nowrap;
     }
