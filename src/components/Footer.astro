@@ -2,16 +2,23 @@
 
 ---
 
-<footer class="container">
-  <a class="back-to-top" href="#">Subir<i class="icon arrow-up"></i></a>
+<footer>
+  <div class="container">
+    <a class="back-to-top" href="#">Subir<i class="icon arrow-up"></i></a>
+  </div>
 </footer>
 
 <style>
   footer {
+    padding: 3rem 0;
+    border-top: var(--border-deco-width) var(--border-deco-style) var(--border-deco-color);
+  }
+
+  footer .container {
     display: flex;
     flex-flow: row nowrap;
-    padding: 2rem 0;
   }
+
   .back-to-top {
     align-items: end;
   }
