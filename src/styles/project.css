@@ -4,12 +4,17 @@
  *  Import this file individually from the layout for projects.
  */
 
+.content-right,
+.content-center,
+.content-left {
+  padding: calc(var(--pico-spacing) * 2) 0;
+}
+
 @media screen and (min-width: 768px) {
   .content-right,
   .content-center,
   .content-left {
     max-width: 60%;
-    padding: 2rem 0;
   }
 
   .content-right {

@@ -33,23 +33,28 @@ const { projectFrontmatter, projectCover } = Astro.props;
 </MainLayout>
 
 <style>
+  .project-cover {
+    padding-top: calc(var(--pico-spacing) * 3);
+    margin: 0;
+  }
+
+  .project-cover > :where(img) {
+    display: block;
+    margin: 0 auto;
+  }
+
   .project-head,
   .project-body {
-    max-width: 1200px;
+    max-width: 1280px;
+    padding: calc(var(--pico-spacing) * 3) 0;
+    margin: 0 auto;
   }
 
   .project-head {
     display: flex;
     flex-flow: column nowrap;
     align-items: baseline;
-    padding: 2rem 0;
     border-bottom: var(--border-deco-width) var(--border-deco-style) var(--border-deco-color);
-    margin: 0 auto;
-  }
-
-  .project-body {
-    padding: 2rem 0;
-    margin: 0 auto;
   }
 
   .project-title {
