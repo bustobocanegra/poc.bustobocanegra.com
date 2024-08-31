@@ -3,38 +3,224 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import hero from '../images/hero.gif';
 
+const projects = await Astro.glob('../pages/projects/**/*.{md,mdx}');
 const pageTitle = "Busto Bocanegra";
 
 ---
 
 <MainLayout pageTitle={pageTitle}>
-  <div class="bg"></div>
-  <div class="container">
-    <section class="hero">
-      <img class="hero-image" src={hero.src} alt="miscellaneous images from projects">
-    </section>
-  </div>
+  <section id="intro" class="section-wrapper">
+    <div class="bg"></div>
+    <div class="container">
+      <div class="hero">
+        <h1 class="a">Diseño interdisciplinar</h1>
+        <ul>
+          <li class="b">Espacios</li>
+          <li class="c">Identidad & Branding</li>
+          <li class="d">Experiencias</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section-wrapper">
+    <div class="container">
+      <hgroup>
+        <h2>Proyectos Destacados</h2>
+      </hgroup>
+      <div class="card-group">
+      {projects.map((project) => 
+        <a href={project.url}>
+          <div class="card">
+            <div class="card-media">
+              <img src={project.cover.src} alt={project.cover.alt} />
+            </div>
+            <div class="card-content">
+              <small class="pretitle">{project.frontmatter.projectClient}</small>
+              <h3 class="title">{project.frontmatter.projectName}</h3>
+              <span class="cta">Ver proyecto <i class="icon arrow-right"></i></span>
+            </div>
+          </div>
+        </a>
+      )}
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section-wrapper">
+    <div class="container">
+      <hgroup>
+        <h2>Sobre mí</h2>
+      </hgroup>
+      <p class="bio">Me interesa la comunicación visual y el diseño de espacios, tanto del mundo físico como del digital. Con una aproximación interdisciplinar, mantengo una práctica centrada en identidades, diseño web y diseño de espacios. Mi trabajo es estructurado y sistemático, con una visión integral, exploradora y entusiasta.</p>
+    </div>
+  </section>
 </MainLayout>
 
 <style>
+  .section-wrapper {
+    --pico-block-spacing-vertical: 3rem;
+    padding-top: var(--pico-block-spacing-vertical);
+    padding-bottom: var(--pico-block-spacing-vertical);
+    margin: 0;
+  }
+
+  .section-wrapper hgroup {
+    margin-bottom: calc(var(--pico-spacing) * 2.5);
+  }
+
+  /* Intro Section
+  ----------------- */
+
   .hero {
     z-index: 1;
     display: flex;
-    height: fit-content;
+    flex-flow: row wrap;
   }
 
-  .hero .hero-image {
-    width: auto;
-    height: 100%;
-    margin: 0 auto;
+  .hero h1 {
+    --pico-block-spacing-vertical: 3rem;
+    max-width: 45rem;
   }
 
-  /* Background decoration */
+  .hero ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--pico-spacing);
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero ul li {
+    list-style-position: inside;
+  }
+
+  .hero .a {
+    --pico-font-size: 440%;
+    font-size: var(--pico-font-size);
+  }
+
+  .hero .b {
+    --pico-font-size: 150%;
+    font-size: var(--pico-font-size);
+    letter-spacing: 2px;
+  }
+
+  .hero .c {
+    --pico-font-size: 150%;
+    font-family: var(--font-family-serif);
+    font-size: var(--pico-font-size);
+    letter-spacing: 2px;
+  }
+
+  .hero .d {
+    --pico-font-size: 150%;
+    font-size: var(--pico-font-size);
+    letter-spacing: 2px;
+  }
+
+  /* Intro background */
+  #intro {
+  position: relative;
+  }
+
   .bg {
     position: absolute;
     z-index: -10;
     top: 0;
     width: 100vw;
-    height: 50vh;
+    height: 100%;
+    background: ghostwhite;
+  }
+
+  /* Projects Section
+  -------------------- */
+
+  /* Card group */
+  .card-group {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .card-group > :where(a, [role="link"]) {
+    display: block;
+    overflow: hidden;
+    margin-bottom: calc(var(--pico-spacing) * 2);
+    text-decoration: none;
+  }
+
+  .card-group > :where(a:nth-last-child(1), [role="link"]:nth-last-child(1)) {
+    margin-bottom: 0;
+  }
+
+  /* Card */
+  .card {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .card-media {
+    flex: 0 1 60%;
+    overflow: hidden;
+  }
+
+  .card-content {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 1 40%;
+    padding: calc(var(--pico-spacing) * 1.5);
+  }
+
+  .card-content .pretitle {
+    margin: 0 0 .5rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+  }
+
+  .card-content .title {
+    margin: 0 0 .5rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .card {
+      flex-flow: row nowrap;
+    }
+
+    .card-content {
+      padding: calc(var(--pico-spacing) * 2);
+    }
+
+    .card img {
+      transition: transform .3s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.02);
+    }
+
+    .card-content .title {
+      margin: 0 0 1rem;
+    }
+
+    .card:hover .title,
+    .card:hover .cta {
+      text-decoration: underline var(--border-deco-style) .1rem;
+      text-underline-offset: .4rem;
+    }
+  }
+
+  /* About Section
+  ----------------- */
+  #about {
+    background: ghostwhite;
+  }
+
+  .bio {
+    --pico-font-size: 118.75%;
+    max-width: 45rem;
+    font-size: var(--pico-font-size);
   }
 </style>

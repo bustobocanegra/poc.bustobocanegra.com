@@ -59,6 +59,10 @@ img {
   height: auto;
 }
 
+body > main {
+  padding-block: 0;
+}
+
 nav,
 main {
   margin: 0 auto;
