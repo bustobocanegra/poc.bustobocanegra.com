@@ -4,6 +4,9 @@
 
 <footer>
   <div class="container">
+    <div>
+      <p>Email: <span class="mail">bustobocanegra[at]gmx.com</span></p>
+    </div>
     <a class="back-to-top" href="#">Subir<i class="icon arrow-up"></i></a>
   </div>
 </footer>
@@ -16,10 +19,11 @@
 
   footer .container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    align-items: center;
   }
 
-  .back-to-top {
-    align-items: end;
+  .mail {
+    margin-left: 5px;
   }
 </style>
